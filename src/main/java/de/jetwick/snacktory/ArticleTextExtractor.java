@@ -173,20 +173,20 @@ public class ArticleTextExtractor {
 		}
 
 		if (bestMatchElement != null) {
-			Element imgEl = determineImageSource(bestMatchElement);
-			if (imgEl != null) {
-				//System.out.println("--> found image url : "+imgEl.attr("src"));
-				res.setImageUrl(SHelper.replaceSpaces(imgEl.attr("src")));
-				// TODO remove parent container of image if it is contained in
-				// bestMatchElement
-				// to avoid image subtitles flooding in
-			} else {
-				imgEl = determineImageSource(doc.body());
-				if(imgEl != null) {
-					//System.out.println("--> found image url (in body) : "+imgEl.attr("src"));
-					res.setImageUrl(SHelper.replaceSpaces(imgEl.attr("src")));
-				}
-			}
+			// Element imgEl = determineImageSource(bestMatchElement);
+			// if (imgEl != null) {
+			// 	//System.out.println("--> found image url : "+imgEl.attr("src"));
+			// 	res.setImageUrl(SHelper.replaceSpaces(imgEl.attr("src")));
+			// 	// TODO remove parent container of image if it is contained in
+			// 	// bestMatchElement
+			// 	// to avoid image subtitles flooding in
+			// } else {
+			// 	imgEl = determineImageSource(doc.body());
+			// 	if(imgEl != null) {
+			// 		//System.out.println("--> found image url (in body) : "+imgEl.attr("src"));
+			// 		res.setImageUrl(SHelper.replaceSpaces(imgEl.attr("src")));
+			// 	}
+			// }
 
 			// clean before grabbing text
 			String text = formatter.getFormattedText(bestMatchElement);
@@ -334,7 +334,7 @@ public class ArticleTextExtractor {
 				}
 			}
 		}
-		System.out.println(" >> imageUrl : [" + imageUrl + "]");
+		// System.out.println(" >> imageUrl : [" + imageUrl + "]");
 		return imageUrl;
 	}
 
