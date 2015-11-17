@@ -21,5 +21,5 @@ libraryDependencies ++= Seq(
   "org.jsoup" % "jsoup" % "1.7.2",
   "org.mortbay.jetty" % "jsp-2.1-glassfish" % "2.1.v20100127",
   "com.rosaloves" % "bitlyj" % "2.0.0",
-  "javax.servlet" % "servlet-api" % "2.5"
+  "javax.servlet" % "servlet-api" % "3.0"
 )
