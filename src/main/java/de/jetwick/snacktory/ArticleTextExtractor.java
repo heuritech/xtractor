@@ -162,7 +162,7 @@ public class ArticleTextExtractor {
 						}
 
 						if (siblingScore >= 3.0) {
-							System.out.println(">> Parent has way too many eligible siblings. promoting parent to main element");
+						    // System.out.println(">> Parent has way too many eligible siblings. promoting parent to main element");
 							bestMatchElement = bestParent;
 							break;
 						}
