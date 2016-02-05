@@ -59,7 +59,7 @@ Then run it with:
     String charset = "UTF-8"
     String url = "http://www.random.com";
     String html = "<html><body><div>Hello World</div></body></html>"
-    ExtractorResult eResult = extractor.extract(content, charset, url);
+    ExtractorResult eResult = extractor.extract(html, charset, url);
     String summary = summarizer.summarize(eResult.getText(), summarySentenceNb);
 
     System.out.print("title:  \t"+ SHelper.replaceSmartQuotes(eResult.getTitle()) + "\n");
