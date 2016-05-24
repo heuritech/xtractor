@@ -10,7 +10,7 @@ scalacOptions := Seq(
   "-encoding", "UTF-8", "-Xlint", "-deprecation", "-unchecked", "-feature"
 )
 
-javacOptions in doc ++= Seq("-source", "1.8")
+javacOptions in doc ++= Seq("-source", "1.8", "-Xdoclint:none")
 
 libraryDependencies ++= Seq(
   "org.apache.httpcomponents" % "httpasyncclient" % "4.0-beta3",
